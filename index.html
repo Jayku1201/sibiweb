@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SIBI 策略顧問｜洞見未來，驅動轉型</title>
+  <meta name="description" content="為中小企業與新創團隊擘劃成長與數位轉型藍圖。" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SIBI 策略顧問｜洞見未來，驅動轉型" />
+  <meta property="og:description" content="為中小企業與新創團隊擘劃成長與數位轉型藍圖。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--c-primary:#0A1833;--c-accent:#E1B948;}
+    html{scroll-behavior:smooth;}
+    body{margin:0;font-family:"Noto Sans TC",system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--c-primary);color:#fff;}
+    .container{max-width:1120px;margin:0 auto;padding:0 20px;}
+    header{position:sticky;top:0;z-index:50;background:#0A1833CC;backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid #ffffff1a}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}
+    .brand span{font-weight:800;letter-spacing:.02em}
+    .btn{background:var(--c-accent);color:var(--c-primary);border:none;border-radius:10px;padding:10px 16px;font-weight:700;cursor:pointer}
+    .btn:hover{filter:brightness(1.06)}
+    .focus{outline:3px solid var(--c-accent);outline-offset:2px}
+    .hero{min-height:75vh;display:grid;place-items:center;text-align:center;padding:64px 0}
+    h1{font-weight:800;line-height:1.1;font-size:clamp(32px,6vw,56px);margin:0 0 12px}
+    h2{font-weight:800;font-size:clamp(22px,3.6vw,36px);color:#0A1833;margin:0 0 10px}
+    p.lead{opacity:.85;font-size:clamp(16px,2.4vw,20px)}
+    section.alt{background:#fff;color:var(--c-primary);padding:64px 0}
+    .cards{display:grid;gap:16px;grid-template-columns:repeat(3,1fr)}
+    .card{background:#ffffff0D;border:1px solid #ffffff1a;border-radius:14px;padding:18px}
+    .card h3{margin:0 0 6px;font-size:20px}
+    .footer{border-top:1px solid #ffffff1a;color:#ffffffb3;padding:28px 0;text-align:center}
+    /* RWD */
+    @media (max-width:960px){ .cards{grid-template-columns:1fr} .nav ul{display:none} }
+    /* forms */
+    form{display:grid;gap:12px;max-width:640px}
+    input,textarea{width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:16px}
+    label{font-size:14px;color:#334155;margin-bottom:4px;display:block}
+    .msg{font-size:14px;margin-top:6px}
+  </style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"Organization","name":"SIBI 策略顧問","url":"https://sibi-advisory.com"}
+  </script>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="回首頁">
+      <!-- 簡化版 SVG logo（品牌色） -->
+      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+        <rect x="2" y="2" width="28" height="28" rx="6" fill="#0A1833"/>
+        <path d="M8 20h8v4H8zm0-6h16v4H8zm0-6h12v4H8z" fill="#E1B948"/>
+      </svg>
+      <span>SIBI 策略顧問</span>
+    </a>
+    <ul style="display:flex;gap:18px;align-items:center;list-style:none;margin:0;padding:0">
+      <li><a href="#about" style="color:#fff;text-decoration:none">關於</a></li>
+      <li><a href="#services" style="color:#fff;text-decoration:none">服務</a></li>
+      <li><a href="#contact" class="btn">聯絡我們</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="container">
+      <h1>洞見未來，驅動轉型</h1>
+      <p class="lead">為中小企業與新創團隊，擘劃企業成長與數位轉型的宏偉藍圖。</p>
+      <p><a class="btn" href="#contact">開啟您的轉型之旅</a></p>
+    </div>
+  </section>
+
+  <section id="about" class="alt">
+    <div class="container">
+      <h2>關於 SIBI</h2>
+      <p>我們的理念根植於夥伴關係與策略洞察。致力於以簡化複雜、落地為先的方式，釋放客戶長期而穩健的增長潛力。</p>
+    </div>
+  </section>
+
+  <section id="services" style="padding:64px 0">
+    <div class="container">
+      <h2 style="color:#fff">我們的服務</h2>
+      <div class="cards">
+        <div class="card"><div style="font-size:28px">🧭</div><h3>策略規劃</h3><p>打造可執行且可持續的成長路線圖。</p></div>
+        <div class="card"><div style="font-size:28px">🔧</div><h3>數位轉型</h3><p>將數位技術整合至營運核心，提高效率與韌性。</p></div>
+        <div class="card"><div style="font-size:28px">🚀</div><h3>市場進入</h3><p>以數據與洞察加速拓展新市場。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="alt">
+    <div class="container">
+      <h2>開啟對話</h2>
+      <p class="lead">想討論你的成長與轉型計畫？留下訊息，我們來回覆你。</p>
+
+      <form id="contactForm" action="" method="POST" novalidate>
+        <!-- 若已取得 Formspree 端點，請把上方 action="" 改成你的端點 -->
+        <div>
+          <label>姓名 <span style="color:#ef4444">*</span></label>
+          <input name="name" required />
+        </div>
+        <div>
+          <label>公司</label>
+          <input name="company" />
+        </div>
+        <div>
+          <label>電子郵件 <span style="color:#ef4444">*</span></label>
+          <input name="email" type="email" required />
+        </div>
+        <div>
+          <label>您的訊息 <span style="color:#ef4444">*</span></label>
+          <textarea name="message" rows="4" required></textarea>
+        </div>
+        <button class="btn" type="submit">送出</button>
+        <p id="formMsg" class="msg"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  © <span id="year"></span> SIBI 策略顧問. All Rights Reserved.
+</footer>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const data = new FormData(form);
+  const required = ['name','email','message'];
+  for (const k of required){ if(!data.get(k)){ setMsg('請完整填寫必填欄位。', 'red'); return; } }
+  if (form.action){ // 你有設定 Formspree 端點
+    try{
+      const res = await fetch(form.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
+      setMsg(res.ok ? '已送出，我們會盡快回覆。' : '送出失敗，稍後再試或直接來信。', res.ok?'green':'red');
+      if(res.ok) form.reset();
+    }catch{ setMsg('送出失敗，請稍後重試。','red'); }
+  }else{
+    setMsg('已收到您的訊息（示意）。如需寄信，請設定表單端點。','green');
+    form.reset();
+  }
+  function setMsg(t,c){ const el=document.getElementById('formMsg'); el.textContent=t; el.style.color=c; }
+});
+</script>
+</body>
+</html>
+User-agent: *
+Allow: /
+Sitemap: https://你的網域/sitemap.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://你的網域/</loc></url>
+</urlset>

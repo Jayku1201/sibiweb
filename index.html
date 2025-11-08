@@ -40,7 +40,7 @@
     /* RWD */
     @media (max-width:960px){ .cards{grid-template-columns:1fr} .nav ul{display:none} }
     /* forms */
-    form{display:grid;gap:12px;max-width:640px}
+    form{display:grid;gap:12px;max-width:640px;margin:0 auto}
     input,textarea{width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:10px;padding:10px 12px;font-size:16px}
     label{font-size:14px;color:#334155;margin-bottom:4px;display:block}
     .msg{font-size:14px;margin-top:6px}
@@ -54,15 +54,13 @@
   <div class="container nav">
     <a class="brand" href="#home" aria-label="回首頁">
       <!-- 簡化版 SVG logo（品牌色） -->
-      <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
-        <rect x="2" y="2" width="28" height="28" rx="6" fill="#0A1833"/>
-        <path d="M8 20h8v4H8zm0-6h16v4H8zm0-6h12v4H8z" fill="#E1B948"/>
+      <img src="logo.png" alt="SIBI Logo" width="32" height="32" />
       </svg>
       <span>SIBI 策略顧問</span>
     </a>
     <ul style="display:flex;gap:18px;align-items:center;list-style:none;margin:0;padding:0">
-      <li><a href="#about" style="color:#fff;text-decoration:none">關於</a></li>
-      <li><a href="#services" style="color:#fff;text-decoration:none">服務</a></li>
+      <li><a href="#about" style="color:#fff;text-decoration:none">關於我們</a></li>
+      <li><a href="#services" style="color:#fff;text-decoration:none">核心能量</a></li>
       <li><a href="#contact" class="btn">聯絡我們</a></li>
     </ul>
   </div>

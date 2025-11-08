@@ -4,10 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SIBI 策略顧問｜洞見未來，驅動轉型</title>
+
+  <!-- SEO / Open Graph -->
   <meta name="description" content="為中小企業與新創團隊擘劃成長與數位轉型藍圖。" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="SIBI 策略顧問｜洞見未來，驅動轉型" />
   <meta property="og:description" content="為中小企業與新創團隊擘劃成長與數位轉型藍圖。" />
+  <meta property="og:url" content="https://sibi-advisory.com/" />
+  <link rel="canonical" href="https://sibi-advisory.com/" />
+
+  <!-- 字型 -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
@@ -94,8 +100,8 @@
       <h2>開啟對話</h2>
       <p class="lead">想討論你的成長與轉型計畫？留下訊息，我們來回覆你。</p>
 
-      <form id="contactForm" action="" method="POST" novalidate>
-        <!-- 若已取得 Formspree 端點，請把上方 action="" 改成你的端點 -->
+      <!-- ✅ 已接上你的 Formspree 端點 -->
+      <form id="contactForm" action="https://formspree.io/f/xkgplboy" method="POST">
         <div>
           <label>姓名 <span style="color:#ef4444">*</span></label>
           <input name="name" required />
@@ -124,32 +130,24 @@
 </footer>
 
 <script>
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('contactForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const form = e.currentTarget;
-  const data = new FormData(form);
-  const required = ['name','email','message'];
-  for (const k of required){ if(!data.get(k)){ setMsg('請完整填寫必填欄位。', 'red'); return; } }
-  if (form.action){ // 你有設定 Formspree 端點
+  // 年份
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // 表單送出後顯示結果
+  const form = document.getElementById('contactForm');
+  const msg  = document.getElementById('formMsg');
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    msg.textContent = '送出中…';
+    msg.style.color = '#fff';
     try{
-      const res = await fetch(form.action, { method:'POST', body:data, headers:{'Accept':'application/json'} });
-      setMsg(res.ok ? '已送出，我們會盡快回覆。' : '送出失敗，稍後再試或直接來信。', res.ok?'green':'red');
-      if(res.ok) form.reset();
-    }catch{ setMsg('送出失敗，請稍後重試。','red'); }
-  }else{
-    setMsg('已收到您的訊息（示意）。如需寄信，請設定表單端點。','green');
-    form.reset();
-  }
-  function setMsg(t,c){ const el=document.getElementById('formMsg'); el.textContent=t; el.style.color=c; }
-});
+      const res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
+      if(res.ok){ msg.textContent='已送出，我們會盡快回覆。'; msg.style.color='#22c55e'; form.reset(); }
+      else{ msg.textContent='送出失敗，請稍後重試或直接寫信到 info@sibi-advisory.com'; msg.style.color='#ef4444'; }
+    }catch(err){
+      msg.textContent='連線異常，請稍後重試。'; msg.style.color='#ef4444';
+    }
+  });
 </script>
 </body>
 </html>
-User-agent: *
-Allow: /
-Sitemap: https://你的網域/sitemap.xml
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://你的網域/</loc></url>
-</urlset>
